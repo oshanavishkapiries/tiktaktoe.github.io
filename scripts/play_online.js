@@ -205,7 +205,7 @@ document
     } else {
       gameId = await createGame();
       const gameLink = `${
-        window.location.origin + "/play-online.html"
+        "https://oshanavishkapiries.github.io/tiktaktoe.github.io/play-online.html"
       }?gameId=${gameId}`;
       document.getElementById("gameLink").value = gameLink;
       document.getElementById("createGameButton").innerText = "Play";
