@@ -165,7 +165,7 @@ function startPolling(gameId) {
 restartButton.addEventListener("click", restartGame);
 
 function restartGame() {
-  window.location.href = "/play-online.html";
+  window.location.href = "/tiktaktoe.github.io/play-online.html";
 }
 
 function checkWin(board) {
@@ -204,15 +204,13 @@ document
       toggleWaitingPopup(false);
     } else {
       gameId = await createGame();
-      const gameLink = `${
-        "https://oshanavishkapiries.github.io/tiktaktoe.github.io/play-online.html"
-      }?gameId=${gameId}`;
+      const gameLink = `https://oshanavishkapiries.github.io/tiktaktoe.github.io/play-online.html?gameId=${gameId}`;
       document.getElementById("gameLink").value = gameLink;
       document.getElementById("createGameButton").innerText = "Play";
       toggleWaitingPopup(true);
       startPolling(gameId);
     }
-  });
+});
 
 document
   .getElementById("joinGameButton")
@@ -226,7 +224,7 @@ document
     } catch (error) {
       alert(error.message);
     }
-  });
+});
 
 const urlParams = new URLSearchParams(window.location.search);
 const gameIdFromUrl = urlParams.get("gameId");
