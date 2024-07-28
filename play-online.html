@@ -5,13 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tik Tak Toe</title>
     <link rel="stylesheet" href="./global.css" />
-    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
-    <script type="module" src="./scripts/main.js" defer></script>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <script type="module" src="./scripts/play_online.js" defer></script>
   </head>
   <body>
     <div class="background_img"></div>
     <div class="background_img_mask"></div>
     <main class="center">
+      <div id="modal" class="modal">
+        <div class="l-con modal-content">
+          <span id="modal-message"></span>
+          <button id="restartButton" class="btn">Restart</button>
+        </div>
+      </div>
+
+      <div id="waiting-modal" class="modal">
+        <div class="l-con modal-content">
+          <span id="modal-message"> Waiting for other player's move </span>
+        </div>
+      </div>
+
+      <div id="join-modal" class="modal">
+        <div class="l-con modal-content">
+          <input type="text" id="gameLink" class="gameLink" readonly />
+          <button id="createGameButton" class="btn">Create Game</button>
+          <button id="joinGameButton" class="btn">Join Game</button>
+        </div>
+      </div>
+
       <div class="l-con">
         <a href="./index.html"
           ><i class="bi bi-arrow-left-circle-fill"> go back</i></a

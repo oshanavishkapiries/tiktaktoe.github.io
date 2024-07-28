@@ -156,6 +156,18 @@ main {
   transition: box-shadow 0.3s ease;
 }
 
+.gameLink {
+  text-decoration: none;
+  padding: 10px;
+  color: var(--primary-color);
+  width: 150px;
+  border-radius: 10px;
+  border-width: 0.15em;
+  border-style: solid;
+  border-color: var(--primary-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .btn:hover {
   box-shadow: 0 0 0;
   background-color: var(--secondary-color);
